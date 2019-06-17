@@ -1,0 +1,841 @@
+<!doctype html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8">
+    <title>I'Max - Communicate More</title>
+    <meta name="title" content="Maxpress e I’M Press agora são I’Max">
+    <meta name="description" content="O I’Max é uma nova jornada tecnológica que nasce da fusão entre a tradição que a Maxpress inspira com a mentalidade de startup do I’M Press - dois grandes fornecedores de tecnologia de comunicação. Conheça o que o I’Max pode fazer por você!">
+    <!-- <link rel="canonical" href="./regular-html-version.html"> -->
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+
+
+    <style amp-custom>
+      header{width:100vw;height:100px;background-color:#efefef}
+      .etiquetasFullContainer{font-family:'Roboto Condensed',sans-serif;color:#26547c;box-sizing:border-box;width:100vw;max-width:1000px;margin:10px auto 0;position:relative;display:block}
+      .voltarBtn{display:flex;flex-direction:row;align-items:center;justify-content:center;position:absolute;align-self:center;box-sizing:border-box;padding:7px 10px;border:none;background-color:#415b76;color:#eee2df;border-radius:7px;font-size:16px;transition:.3s ease all;cursor:pointer;top:10px;left:10px;outline:none}
+      .voltarBtn:hover{background-color:#1f8a70}
+      .voltarBtn svg{margin-right:5px}
+      .telaEtiquetasTitle{display:block;text-align:center;font-size:30px;font-weight:200;margin-bottom:10px;font-family:'Roboto',sans-serif}
+      .telaEtiquetasTitleLead{display:block;text-align:center;font-family:'Roboto',sans-serif;line-height:1.3}
+      .etiquetasDesignWrapper,.etiquetasCamposWrapper{display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:auto auto auto;position:relative;margin-top:10px;grid-column-gap:30px;align-items:start}
+      .etiquetaDestinatarioDesignWrapper,.etiquetaRemetenteDesignWrapper{position:relative;display:flex;flex-direction:column;justify-content:center;background-color:#fff;box-shadow:0 0 40px 0 rgba(0,0,0,0.1);border-radius:10px;box-sizing:border-box;padding:10px;font-size:14px;z-index:1}
+      .camposListaWrapper{display:block;position:relative;border-radius:7px;border:2px dotted #eee2df;box-sizing:border-box;padding:5px}
+      .camposListaWrapper ol li{display:list-item;margin:3px;border:thin solid #eee2df;padding:2px 2px 2px 7px;border-radius:5px;position:relative;cursor:grab;font-size:14px}
+      .camposListaWrapper ol{margin:0;padding-left:20px}
+      .etiquetasModelosTitle{font-family:'Roboto',sans-serif;font-size:20px;text-align:center;display:block;font-weight:300;color:#7b9ba6;margin-bottom:10px}
+      .campoEtiquetasDelBtn{position:absolute;display:block;margin:0;padding:0;cursor:pointer;border:none;background-color:transparent;top:3.5px;right:5px}
+      .etiquetasAddBtn{position:absolute;display:block;margin:0;padding:0;cursor:pointer;border:none;background-color:transparent;top:4px;right:5px}
+      .etiquetasCamposWrapper{margin-top:10px}
+      .etiquetasCamposTitle{display:block;text-align:center;font-size:18px;color:#7b9ba6}
+      .etiquetasDestinatariosCamposWrapper,.etiquetasRemetenteCamposWrapper{display:block;border-radius:10px;border:1.5px dotted #7b9ba6;box-sizing:border-box;padding:5px;background-color:#fff}
+      .etiquetasDestinatariosCamposWrapper ul,.etiquetasRemetenteCamposWrapper ul{margin:5px;padding:0}
+      .etiquetasDestinatariosCamposWrapper ul li,.etiquetasRemetenteCamposWrapper ul li{display:block;position:relative;padding:2px;border:thin solid #eee2df;border-radius:5px;margin:3px;cursor:grab;font-size:14px}
+      .etiquetasFooterGrid{display:grid;position:relative;grid-template-columns:485px 1fr;grid-template-rows:auto;margin-top:10px;grid-column-gap:30px;box-sizing:border-box;width:100%;max-width:1000px}
+      .carrouselPimacoWrapper{display:block;grid-column:1 / 2;grid-row:1 / 2;border:thin solid #eee2df;border-radius:10px;padding:5px;box-sizing:border-box;position:relative;background-color:#fff;z-index:1}
+      .carrouselPimacoTitle{text-align:center;display:block;position:relative;font-size:18px;font-family:'Roboto',sans-serif;margin-bottom:6px}
+      .i-amphtml-scrollable-carousel-container{padding:5px}
+      .carrouselPimacoWrapper amp-carousel amp-img{cursor:pointer}
+      .carrouselPimacoWrapper amp-carousel amp-img:hover{outline:2px solid #1f8a70}
+      .etiquetasFontesBtnsWrapper{display:flex;flex-direction:column;flex-wrap:nowrap;grid-column:2 / 3;width:100%;align-items:center;box-sizing:border-box;position:relative;justify-content:center}
+      .seletor-fontes{display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;margin:0 auto 20px}
+      .seletor-fontes span{font-size:12px;margin:0 5px 0 0}
+      .seletor-fontes select{padding:7px;border-radius:7px;outline:none}
+      .font1{font-family:Arial,sans-serif}
+      .font2{font-family:Arial Narrow,sans-serif}
+      .font3{font-family:Times,Times New Roman,serif}
+      .font4{font-family:Helvetica,sans-serif}
+      .font5{font-family:Georgia,serif}
+      .font6{font-family:Verdana,sans-serif}
+      .font7{font-family:Trebuchet MS,sans-serif}
+      .font8{font-family:Bookman,URW Bookman L,serif}
+      .font9{font-family:New Century Schoolbook,TeX Gyre Schola,serif}
+      .font10{font-family:American Typewriter,serif}
+      .font11{font-family:Courier New,monospace}
+      .font13{font-family:Gill Sans,sans-serif}
+      .footerBtnsWrapper{display:flex;position:relative;flex-direction:row;flex-wrap:nowrap;align-items:center;margin-top:20px;justify-content:space-between;width:100%}
+      .footerBtnsWrapper button{display:flex;flex-direction:row;align-items:center;box-sizing:border-box;padding:6px 10px;border:none;border-radius:7px;background-color:#233656;color:#eee2df;transition:.4s ease all;cursor:pointer;font-size:14px;outline:none}
+      .footerBtnsWrapper button svg{margin-right:6px}
+      .footerBtnsWrapper button:hover{background-color:#1f8a70}
+      a{color:#233656;font-weight:500;font-size:14px}
+      a:visited{color:#233656;font-weight:500}
+      .etiquetasPreviewFullContainer{position:absolute;display:none;grid-template-columns:repeat(2,1fr);background-color:#fff;box-shadow:0 0 120px 0 rgba(0,0,0,0.4);box-sizing:border-box;padding:20px;border-radius:10px;top:50%;left:50%;transform:translate(-50%,-50%);grid-column-gap:10px;width:800px;z-index:200;color:#233656}
+      .etiquetasPreviewTitle{font-size:26px;display:block;grid-column:1 / -1;grid-row:1 / 2;text-align:center;font-family:'Roboto',sans-serif}
+      .etiquetaPreviewWrapper{font-family:Arial,sans-serif;font-weight:500;display:flex;flex-direction:column;flex-wrap:nowrap;font-size:12px;box-sizing:border-box;position:relative;border:2px dotted #eee2df;border-radius:9px;padding:10px}
+      .previewEtiquetaRemetenteWrapper{position:relative;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(5,auto);grid-gap:10px;grid-column:1 / -1;grid-row:2 / 3;box-sizing:border-box;padding:15px}
+      .gerarEtiquetasBtn{grid-column:1 / -1;justify-self:center;border:none;position:relative;display:block;padding:10px;box-sizing:border-box;font-size:16px;cursor:pointer;border-radius:10px;background-color:#233656;color:#fff;transition:.3s ease all;margin-top:20px;outline:none}
+      .gerarEtiquetasBtn:hover{background-color:#1f8a70}
+      .etiquetasPaginacaoWrapper{position:relative;grid-column:1 / -1;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-self:center;font-family:'Roboto',sans-serif;width:400px;justify-content:space-around}
+      .etiquetasPaginacaoWrapper button{border:none;padding:0;margin:0;background-color:transparent;cursor:pointer;outline:none}
+      .paginationBtn{cursor:pointer;font-size:16px;color:#233656;background-color:transparent}
+      .paginationBtn:hover{font-weight:600}
+      .tutorialFullWrapper{top:0;position:absolute;width:100%;height:100%;background-color:#000;opacity:.7;border-radius:10px;z-index:10;display:block}
+      .tutorialItensWrapper{top:0;position:absolute;width:100%;height:100%;border-radius:10px;z-index:100;color:#fff;text-align:center;display:block;font-size:18px;display:block}
+      .ordenar{box-sizing:border-box;display:block;position:absolute;border:2px solid #1f8a70;width:30px;height:160px;border-radius:6px;left:15px;top:147px}
+      .ordenar2{left:530px;height:140px}
+      .ordenarText{position:absolute;top:30px;width:250px;left:50%;transform:translateX(-50%)}
+      .arrow1{position:absolute;transform-origin:center center;transform:rotate(240deg);right:300px;top:20px}
+      .arrow2{position:absolute;transform-origin:center center;transform:rotateY(360deg) rotateX(180deg) rotateZ(60deg);left:300px;top:20px}
+      .excluirDot1{position:absolute;width:20px;height:20px;border-radius:50%;border:2px solid #1f8a70;left:440px;top:151px}
+      .excluirDot2{position:absolute;width:20px;height:20px;border-radius:50%;border:2px solid #1f8a70;right:22px;top:151px}
+      .ordenarText1{position:absolute;width:200px;left:50px;top:160px}
+      .arrow3{position:absolute;left:60px;top:230px}
+      .arrow4{position:absolute;transform-origin:center center;transform:rotate(180deg);left:370px;top:140px}
+      .ordenarText3{position:absolute;top:200px;left:300px;width:180px}
+      .ordenarText4{position:absolute;bottom:140px;width:200px;left:410px}
+      .arrow5{position:absolute;bottom:150px;transform-origin:center center;transform:rotate(90deg);left:360px}
+      .arrow6{position:absolute;bottom:150px;transform-origin:center center;transform:rotateY(360deg) rotateX(180deg) rotateZ(-90deg);right:350px}
+      .addDot1{position:absolute;width:20px;height:20px;border-radius:50%;border:2px solid #1f8a70;right:16px;bottom:233px}
+      .ordenarText5{position:absolute;width:180px;top:290px;right:90px}
+      .arrow7{position:absolute;bottom:150px;transform-origin:center center;transform:rotate(-120deg);right:20px;bottom:260px}
+      .shadowText{text-shadow:2px 2px 9px #000;padding:10px;box-sizing:border-box;background-color:rgba(0,0,0,.6);border-radius:10px}
+      .ordenarText6{position:absolute;width:180px;bottom:190px;left:90px}
+      .arrow8{position:absolute;bottom:150px;transform-origin:center center;transform:rotate(-90deg);left:250px;bottom:150px}
+      .ordenarText7{position:absolute;width:180px;bottom:160px;right:230px}
+      .arrow9{position:absolute;bottom:150px;transform-origin:center center;transform:rotate(-120deg);right:175px;bottom:150px}
+      .ordenarText8{position:absolute;width:380px;bottom:120px;right:260px}
+      .arrow10{position:absolute;bottom:150px;transform-origin:center center;transform:rotate(-110deg);right:220px;bottom:90px}
+      .tutorialBtn{position:absolute;z-index:300;right:10px;top:10px}
+      .passosBtnsWrapper{position:absolute;left:50%;transform:translateX(-50%);top:-30px}
+      .passosBtns{border:none;background-color:#233656;box-sizing:border-box;padding:4px 8px;color:#fff;font-size:16px;border-radius:5px;cursor:pointer;outline:none}
+      .passosBtns:hover{background-color:#1f8a70}
+      .passoBtn1{background-color:#1f8a70}
+    </style>
+
+
+
+
+
+
+
+
+
+<!--     <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "NewsArticle",
+      "headline": "Article headline",
+      "image": [
+        "thumbnail1.jpg"
+      ],
+      "datePublished": "2015-02-05T08:00:00+08:00"
+    }
+    </script> -->
+
+
+
+
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+
+
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+
+  </head>
+
+
+
+  <body>
+
+
+
+
+
+<header></header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="etiquetasFullContainer">
+<button class="voltarBtn">
+  <svg fill="#eee2df" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149 256.1" width="20" height="20">
+    <path d="M3.5,119.5l117.8-116c4.7-4.7,12.3-4.7,17,0l7.1,7.1c4.7,4.7,4.7,12.3,0,17L43.1,128l102.2,100.4c4.7,4.7,4.7,12.3,0,17l-7.1,7.1c-4.7,4.7-12.3,4.7-17,0L3.4,136.5C-1.2,131.8-1.2,124.2,3.5,119.5z"/>
+  </svg>
+  Voltar
+</button>
+<button class="tutorialBtn">
+  <svg fill="#eee2df" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149 256.1" width="20" height="20">
+    <path d="M3.5,119.5l117.8-116c4.7-4.7,12.3-4.7,17,0l7.1,7.1c4.7,4.7,4.7,12.3,0,17L43.1,128l102.2,100.4c4.7,4.7,4.7,12.3,0,17l-7.1,7.1c-4.7,4.7-12.3,4.7-17,0L3.4,136.5C-1.2,131.8-1.2,124.2,3.5,119.5z"/>
+  </svg>
+  Tutorial
+</button>
+  <span class="telaEtiquetasTitle">Configure suas etiquetas</span>
+  <span class="telaEtiquetasTitleLead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ea quod, perspiciatis amet cumque laudantium illum illo ex voluptatum consequuntur deleniti dolore expedita, saepe optio aperiam tempora soluta id laborum?</span>
+  <div class="etiquetasDesignWrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- modelo etiqueta destinatário -->    
+    <div class="etiquetaDestinatarioDesignWrapper">
+      <span class="etiquetasModelosTitle">Etiqueta Destinatário</span>
+      <div class="camposListaWrapper">
+        <ol>
+          <li draggable="true">Tratamento
+            <button class="campoEtiquetasDelBtn">
+              <svg fill="#26547c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15" height="15">
+                <path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/>
+              </svg>
+            </button>
+          </li>
+          <li draggable="true">Nome
+            <button class="campoEtiquetasDelBtn">
+              <svg fill="#26547c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15" height="15">
+                <path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/>
+              </svg>
+            </button>
+          </li>
+          <li draggable="true">Cargo
+            <button class="campoEtiquetasDelBtn">
+              <svg fill="#26547c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15" height="15">
+                <path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/>
+              </svg>
+            </button>
+          </li>
+          <li draggable="true">Instituição
+            <button class="campoEtiquetasDelBtn">
+              <svg fill="#26547c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15" height="15">
+                <path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/>
+              </svg>
+            </button>
+          </li>
+          <li draggable="true">Endereço
+            <button class="campoEtiquetasDelBtn">
+              <svg fill="#26547c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15" height="15">
+                <path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/>
+              </svg>
+            </button>
+          </li>
+          <li draggable="true">Cep
+            <button class="campoEtiquetasDelBtn">
+              <svg fill="#26547c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15" height="15">
+                <path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/>
+              </svg>
+            </button>
+          </li>
+        </ol>
+      </div>
+    </div>
+<!-- final modelo etiqueta destinatário -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- modelo etiqueta rementente -->
+    <div class="etiquetaRemetenteDesignWrapper">
+      <span class="etiquetasModelosTitle">Etiqueta Remetente</span>
+      <div class="camposListaWrapper">
+       <ol>
+          <li draggable="true">Nome
+            <button class="campoEtiquetasDelBtn">
+              <svg fill="#26547c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15" height="15">
+                <path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/>
+              </svg>
+            </button>
+          </li>
+          <li draggable="true">Cargo
+            <button class="campoEtiquetasDelBtn">
+              <svg fill="#26547c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15" height="15">
+                <path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/>
+              </svg>
+            </button>
+          </li>
+          <li draggable="true">Instituição
+            <button class="campoEtiquetasDelBtn">
+              <svg fill="#26547c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15" height="15">
+                <path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/>
+              </svg>
+            </button>
+          </li>
+          <li draggable="true">Endereço
+            <button class="campoEtiquetasDelBtn">
+              <svg fill="#26547c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15" height="15">
+                <path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/>
+              </svg>
+            </button>
+          </li>
+          <li draggable="true">Cep
+            <button class="campoEtiquetasDelBtn">
+              <svg fill="#26547c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15" height="15">
+                <path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/>
+              </svg>
+            </button>
+          </li>
+        </ol>
+      </div>
+    </div>
+<!-- final modelo etiqueta rementente -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="etiquetasCamposWrapper">
+
+<!-- adicinar campos etiqueta destinatário -->
+    <div class="etiquetasDestinatariosCamposWrapper">
+      <span class="etiquetasCamposTitle">Adicionar campos na etiqueta destinatário</span>
+      <ul>
+        <li draggable="true">Complemento
+          <button class="etiquetasAddBtn">
+            <svg fill="#26547c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="14" height="14">
+              <path d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"/>
+            </svg>
+          </button>
+        </li>
+        <li draggable="true">Outro campo
+          <button class="etiquetasAddBtn">
+            <svg fill="#26547c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="14" height="14">
+              <path d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"/>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+<!-- final adicinar campos etiqueta destinatário -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- adicinar campos etiqueta remetente -->
+    <div class="etiquetasRemetenteCamposWrapper">
+      <span class="etiquetasCamposTitle">Adicionar campos na etiqueta remetente</span>
+      <ul>
+        <li draggable="true">Complemento
+          <button class="etiquetasAddBtn">
+            <svg fill="#26547c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="14" height="14">
+              <path d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"/>
+            </svg>
+          </button>
+        </li>
+        <li draggable="true">Outro campo
+          <button class="etiquetasAddBtn">
+            <svg fill="#26547c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="14" height="14">
+              <path d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"/>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+<!-- final adicinar campos etiqueta remetente -->
+
+
+
+
+
+
+  </div>
+
+
+<!-- grid footer -->
+<div class="etiquetasFooterGrid">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!-- carrousel formatos pimaco -->
+<div class="carrouselPimacoWrapper">
+  <span class="carrouselPimacoTitle">Escolha o modelo de etiqueta <a href="http://www.pimaco.com.br/como-ler-etiquetas" target="_blank">(Como ler os gabaritos)</a></span>
+  <amp-carousel height="147" layout="fixed-height" type="carousel">
+    <amp-img src="img/pimaco01.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco02.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco03.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco04.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco05.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco06.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco07.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco08.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco09.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco010.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco011.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco012.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco013.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco014.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco015.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco016.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco017.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco018.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco019.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco020.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco021.jpg" width="88" height="139"></amp-img>
+    <amp-img src="img/pimaco022.jpg" width="88" height="139"></amp-img>
+  </amp-carousel>
+</div>
+<!-- final carrousel formatos pimaco -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- etiquetas fontes e btns -->
+  <div class="etiquetasFontesBtnsWrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- seletor de fontes -->
+    <div class="seletor-fontes">
+      <svg class="btn-icon-svg" version="1.1" id="editor-font" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 416 448" xml:space="preserve" width="20" height="20">
+      <path fill="#CCCCCC" d="M216.6,0h-17.2c-5,0-9.5,3.1-11.2,7.8L35.5,416H12c-6.6,0-12,5.4-12,12v8c0,6.6,5.4,12,12,12h88c6.6,0,12-5.4,12-12v-8c0-6.6-5.4-12-12-12H71.9l44.7-120.5h182.3L344.1,416H316c-6.6,0-12,5.4-12,12v8c0,6.6,5.4,12,12,12h88c6.6,0,12-5.4,12-12v-8c0-6.6-5.4-12-12-12h-23.5L227.8,7.8C226.1,3.1,221.6,0,216.6,0z M128.6,263.3l75.7-201.2c1.5-3.9,2.7-7.8,3.7-11.4c0.9,3.6,2.2,7.5,3.7,11.4l75.1,201.3H128.6V263.3z"></path>
+      </svg>
+      <span> ESCOLHA A FONTE PADRÃO DAS ETIQUETAS: </span>
+      <select>
+          <option class="font1"> Arial </option>
+          <option class="font2"> Arial Narrow </option>
+          <option class="font3"> Times New Roman </option>
+          <option class="font4"> Helvetica </option>
+          <option class="font5"> Georgia </option>
+          <option class="font6"> Verdana </option>
+          <option class="font7"> Trebuchet MS </option>
+          <option class="font8"> Bookman </option>
+          <option class="font10"> American Typewriter </option>
+          <option class="font11"> Courier New </option>
+          <option class="font13"> Gill Sans </option>
+      </select>
+    </div>
+<!-- final seletor de fontes -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footerBtnsWrapper">
+  <button class="gerarEtiquetasBtn1">
+    <svg fill="#eee2df" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+      <path d="M0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48H48C21.49 32 0 53.49 0 80zm240-16v176H32V80c0-8.837 7.163-16 16-16h192zM32 432V272h208v176H48c-8.837 0-16-7.163-16-16zm240 16V272h208v160c0 8.837-7.163 16-16 16H272zm208-208H272V64h192c8.837 0 16 7.163 16 16v160z"/>
+    </svg>
+    <span>Gerar Etiquetas</span>
+  </button>
+  <button>
+  <svg fill="#eee2df" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="30" height="30">
+    <path d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zm-22.6 22.7c2.1 2.1 3.5 4.6 4.2 7.4H256V32.5c2.8.7 5.3 2.1 7.4 4.2l83.9 83.9zM336 480H48c-8.8 0-16-7.2-16-16V48c0-8.8 7.2-16 16-16h176v104c0 13.3 10.7 24 24 24h104v304c0 8.8-7.2 16-16 16zm-22-171.2c-13.5-13.3-55-9.2-73.7-6.7-21.2-12.8-35.2-30.4-45.1-56.6 4.3-18 12-47.2 6.4-64.9-4.4-28.1-39.7-24.7-44.6-6.8-5 18.3-.3 44.4 8.4 77.8-11.9 28.4-29.7 66.9-42.1 88.6-20.8 10.7-54.1 29.3-58.8 52.4-3.5 16.8 22.9 39.4 53.1 6.4 9.1-9.9 19.3-24.8 31.3-45.5 26.7-8.8 56.1-19.8 82-24 21.9 12 47.6 19.9 64.6 19.9 27.7.1 28.9-30.2 18.5-40.6zm-229.2 89c5.9-15.9 28.6-34.4 35.5-40.8-22.1 35.3-35.5 41.5-35.5 40.8zM180 175.5c8.7 0 7.8 37.5 2.1 47.6-5.2-16.3-5-47.6-2.1-47.6zm-28.4 159.3c11.3-19.8 21-43.2 28.8-63.7 9.7 17.7 22.1 31.7 35.1 41.5-24.3 4.7-45.4 15.1-63.9 22.2zm153.4-5.9s-5.8 7-43.5-9.1c41-3 47.7 6.4 43.5 9.1z"/>
+  </svg>
+    <span>Gerar PDF</span>
+  </button>
+  <button>
+    <svg fill="#eee2df" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="30" height="30">
+      <path d="M564.907 196.35L388.91 12.366C364.216-13.45 320 3.746 320 40.016v88.154C154.548 130.155 0 160.103 0 331.19c0 94.98 55.84 150.231 89.13 174.571 24.233 17.722 58.021-4.992 49.68-34.51C100.937 336.887 165.575 321.972 320 320.16V408c0 36.239 44.19 53.494 68.91 27.65l175.998-184c14.79-15.47 14.79-39.83-.001-55.3zm-23.127 33.18l-176 184c-4.933 5.16-13.78 1.73-13.78-5.53V288c-171.396 0-295.313 9.707-243.98 191.7C72 453.36 32 405.59 32 331.19 32 171.18 194.886 160 352 160V40c0-7.262 8.851-10.69 13.78-5.53l176 184a7.978 7.978 0 0 1 0 11.06z"/>
+    </svg>
+    <span>Solicitar Impressão<br>e Entrega</span>
+  </button>
+</div>
+
+
+
+
+
+
+
+
+  </div>
+<!-- final etiquetas fontes e btns -->
+
+
+</div>
+<!-- final grid footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="etiquetasPreviewFullContainer" style="display: none;">
+<button class="voltarBtn" id="voltarBtn1">
+  <svg fill="#eee2df" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149 256.1" width="20" height="20">
+    <path d="M3.5,119.5l117.8-116c4.7-4.7,12.3-4.7,17,0l7.1,7.1c4.7,4.7,4.7,12.3,0,17L43.1,128l102.2,100.4c4.7,4.7,4.7,12.3,0,17l-7.1,7.1c-4.7,4.7-12.3,4.7-17,0L3.4,136.5C-1.2,131.8-1.2,124.2,3.5,119.5z"></path>
+  </svg>
+  Voltar
+</button>
+  <span class="etiquetasPreviewTitle">Preview das etiquetas</span>
+  <div class="previewEtiquetaRemetenteWrapper">
+    <div class="etiquetaPreviewWrapper">
+      <span>Sr. Nome Sobrenome</span>
+      <span>Redator</span>
+      <span>Folha de São Paulo</span>
+      <span>Rua Rui Barbosa, 200 - Bairro Centro - São Paulo - SP</span>
+      <span>Cep: 12345-000</span>
+    </div>
+    <div class="etiquetaPreviewWrapper">
+      <span>Sr. Nome Sobrenome</span>
+      <span>Redator</span>
+      <span>Folha de São Paulo</span>
+      <span>Rua Rui Barbosa, 200 - Bairro Centro - São Paulo - SP</span>
+      <span>Cep: 12345-000</span>
+    </div>
+    <div class="etiquetaPreviewWrapper">
+      <span>Sr. Nome Sobrenome</span>
+      <span>Redator</span>
+      <span>Folha de São Paulo</span>
+      <span>Rua Rui Barbosa, 200 - Bairro Centro - São Paulo - SP</span>
+      <span>Cep: 12345-000</span>
+    </div>
+    <div class="etiquetaPreviewWrapper">
+      <span>Sr. Nome Sobrenome</span>
+      <span>Redator</span>
+      <span>Folha de São Paulo</span>
+      <span>Rua Rui Barbosa, 200 - Bairro Centro - São Paulo - SP</span>
+      <span>Cep: 12345-000</span>
+    </div>
+    <div class="etiquetaPreviewWrapper">
+      <span>Sr. Nome Sobrenome</span>
+      <span>Redator</span>
+      <span>Folha de São Paulo</span>
+      <span>Rua Rui Barbosa, 200 - Bairro Centro - São Paulo - SP</span>
+      <span>Cep: 12345-000</span>
+    </div>
+    <div class="etiquetaPreviewWrapper">
+      <span>Sr. Nome Sobrenome</span>
+      <span>Redator</span>
+      <span>Folha de São Paulo</span>
+      <span>Rua Rui Barbosa, 200 - Bairro Centro - São Paulo - SP</span>
+      <span>Cep: 12345-000</span>
+    </div>
+    <div class="etiquetaPreviewWrapper">
+      <span>Sr. Nome Sobrenome</span>
+      <span>Redator</span>
+      <span>Folha de São Paulo</span>
+      <span>Rua Rui Barbosa, 200 - Bairro Centro - São Paulo - SP</span>
+      <span>Cep: 12345-000</span>
+    </div>
+    <div class="etiquetaPreviewWrapper">
+      <span>Sr. Nome Sobrenome</span>
+      <span>Redator</span>
+      <span>Folha de São Paulo</span>
+      <span>Rua Rui Barbosa, 200 - Bairro Centro - São Paulo - SP</span>
+      <span>Cep: 12345-000</span>
+    </div>
+    <div class="etiquetaPreviewWrapper">
+      <span>Sr. Nome Sobrenome</span>
+      <span>Redator</span>
+      <span>Folha de São Paulo</span>
+      <span>Rua Rui Barbosa, 200 - Bairro Centro - São Paulo - SP</span>
+      <span>Cep: 12345-000</span>
+    </div>
+    <div class="etiquetaPreviewWrapper">
+      <span>Sr. Nome Sobrenome</span>
+      <span>Redator</span>
+      <span>Folha de São Paulo</span>
+      <span>Rua Rui Barbosa, 200 - Bairro Centro - São Paulo - SP</span>
+      <span>Cep: 12345-000</span>
+    </div>
+  </div>
+  <div class="etiquetasPaginacaoWrapper">
+    <span class="paginationText">Páginas:</span>
+    <button>
+      <svg fill="#233656" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149 256.1" width="20" height="20">
+        <path d="M3.5,119.5l117.8-116c4.7-4.7,12.3-4.7,17,0l7.1,7.1c4.7,4.7,4.7,12.3,0,17L43.1,128l102.2,100.4c4.7,4.7,4.7,12.3,0,17l-7.1,7.1c-4.7,4.7-12.3,4.7-17,0L3.4,136.5C-1.2,131.8-1.2,124.2,3.5,119.5z"/>
+      </svg>
+    </button>
+    <button class="paginationBtn">01</button>
+    <button class="paginationBtn">02</button>
+    <button class="paginationBtn">03</button>
+    <button class="paginationBtn">04</button>
+    <button class="paginationBtn">05</button>
+    <button class="paginationBtn">06</button>
+    <button class="paginationBtn">07</button>
+    <button class="paginationBtn">08</button>
+    <button class="paginationBtn">09</button>
+    <button class="paginationBtn">10</button>
+    <button>
+      <svg fill="#233656" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149 256.1" width="20" height="20">
+        <path d="M145.4,136.5l-117.8,116c-4.7,4.7-12.3,4.7-17,0l-7.1-7.1c-4.7-4.7-4.7-12.3,0-17L105.8,128L3.6,27.6c-4.7-4.7-4.7-12.3,0-17l7.1-7.1c4.7-4.7,12.3-4.7,17,0l117.8,116C150.1,124.2,150.1,131.8,145.4,136.5z"/>
+      </svg>
+    </button>
+  </div>
+  <button class="gerarEtiquetasBtn">Gerar Etiquetas</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/telaEtiquetas.js"></script>
+  </body>
+</html>
